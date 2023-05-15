@@ -1,12 +1,23 @@
 // Colors
 $black: #000000;
-$white: #ffffff
+$blue: hsl(223, 87%, 63%);
+$buttonHoverBlue: hsl(224, 87, 70);
+$gray: hsl(0, 0%, 59%);
+$lightBlue: hsl(225, 77, 90);
+$lightRed: hsl(354, 100%, 66%);
+$paleBlue: hsl(223, 100%, 88%);
+$veryDarkBlue: hsl(209, 33%, 12%);
+$white: #ffffff;
 
 // Fonts
-
+$libre: 'Libre Franklin', sans-serif;
 
 // Mixins
-
+@mixin font-styling($color, $font-size, $font-weight) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
 
 /* Exemplo de criação de mixin
 

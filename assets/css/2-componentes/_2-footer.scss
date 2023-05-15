@@ -1,0 +1,39 @@
+@import '../1-base/variaveis';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2.25rem;
+
+    &__social {
+        display: flex;
+        gap: .75rem;
+
+        margin-top: 7.5rem;
+
+        .social__icon {
+            @include font-styling($blue, 1rem, '');
+            border: 1px solid $lightBlue;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: $blue;
+                color: $white;
+            }
+        }
+    }
+
+    &__credit {
+        @include font-styling($gray, .625rem, 300);
+        margin-top: 1.75rem;
+    }
+}

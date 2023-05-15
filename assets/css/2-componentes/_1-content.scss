@@ -1,0 +1,83 @@
+@import '../1-base/variaveis';
+
+.content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    padding-top: 5.25rem;
+
+    &__logo {
+        max-width: 3.375rem;
+    }
+
+    &__subtitle {
+        @include font-styling($gray, 1.375rem, '');
+        margin-top: 2.75rem;
+
+        .subtitle__efx {
+            @include font-styling($veryDarkBlue, '', 700);
+        }
+    }
+
+    &__paragraph {
+        @include font-styling($veryDarkBlue, .75rem, '');
+        margin-top: 1.5rem;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+        margin-top: 2rem;
+        width: 100%;
+
+        .field__email {
+            box-sizing: border-box;
+            border: 1px solid $lightBlue;
+            border-radius: 1.375rem;
+
+            max-width: 17.5625rem;
+            width: 100%;
+            height: 2.5rem;
+
+            padding-left: 1.75rem;
+
+            &::placeholder {
+                @include font-styling($lightBlue, .75rem, '');
+            }
+        }
+
+        .field__btn {
+            @include font-styling($white, .75rem, 600);
+            background-color: $blue;
+            border: none;
+            border-radius: 1.375rem;
+            box-sizing: border-box;
+            box-shadow: 0px 3px 10px 1px rgba(77, 124, 243, 0.411);
+            cursor: pointer;
+
+            max-width: 17.5625rem;
+            width: 100%;
+            height: 2.5rem;
+
+            padding: 0;
+
+            &:hover {
+                background-color: $buttonHoverBlue;
+            }
+        }
+
+    }
+
+    &__img {
+        margin-top: 4.25rem;
+        max-width: 40rem;
+        width: 100%;
+    }
+}

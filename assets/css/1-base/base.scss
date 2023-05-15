@@ -1,2 +1,19 @@
 @import './reset';
 @import './variaveis';
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import '../2-componentes/1-content';
+@import '../2-componentes/2-footer';
+
+body {
+    box-sizing: border-box;
+    font-family: $libre;
+    @include font-styling($veryDarkBlue, 1.25rem, 300);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 1.5rem;
+    width: 100%;
+}
