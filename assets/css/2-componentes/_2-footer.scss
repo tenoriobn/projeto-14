@@ -3,15 +3,16 @@
 .footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    padding-bottom: 2.25rem;
+
+    margin-top: 7.5rem;
+    margin-bottom: 3rem;
+    // height: 10vh;
 
     &__social {
         display: flex;
         gap: .75rem;
-
-        margin-top: 7.5rem;
 
         .social__icon {
             @include font-styling($blue, 1rem, '');
@@ -35,5 +36,16 @@
     &__credit {
         @include font-styling($gray, .625rem, 300);
         margin-top: 1.75rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        margin-top: 4.25rem;
+        margin-bottom: 3rem;
+
+        &__credit {
+            @include font-styling('', .75rem, '');
+        }
     }
 }

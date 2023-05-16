@@ -6,12 +6,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
-    padding-top: 5.25rem;
+    // height: 90vh;
+    margin-top: 5.25rem;
 
     &__logo {
-        max-width: 3.375rem;
+        width: 100%;
+        max-width: 55px;
     }
 
     &__subtitle {
@@ -38,6 +38,7 @@
         width: 100%;
 
         .field__email {
+            @include font-styling($veryDarkBlue, .75rem, '');
             box-sizing: border-box;
             border: 1px solid $lightBlue;
             border-radius: 1.375rem;
@@ -50,6 +51,15 @@
 
             &::placeholder {
                 @include font-styling($lightBlue, .75rem, '');
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 0;
+                outline: 1px solid $blue;
+                
+                &::placeholder {
+                    color: $blue;
+                }
             }
         }
 
@@ -79,5 +89,54 @@
         margin-top: 4.25rem;
         max-width: 40rem;
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .content {
+        margin-top: 5.375rem;
+
+        &__logo {
+            max-width: 5.375rem;
+        }
+
+        &__subtitle {
+            @include font-styling('', 3rem, '');
+            margin-top: 3.5rem
+        }
+
+        &__paragraph {
+            @include font-styling('', 1.25rem, '');
+            margin-top: 1.5rem;
+        }
+
+        &__field {
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 2.5rem;
+
+            .field__email {
+                @include font-styling('', 1rem, '');
+                max-width: 420px;
+                height: 56px;
+                border-radius: 1.75rem;
+
+                &::placeholder {
+                    @include font-styling('', 1rem, '');
+                }
+            }
+
+            .field__btn {
+                @include font-styling('', 1rem, '');
+                border-radius: 1.75rem;
+                max-width: 12.5rem;
+                height: 56px;
+            }
+        }
+
+        &__img {
+            max-width: 40rem;
+            margin-top: 5.75rem;
+        }
     }
 }

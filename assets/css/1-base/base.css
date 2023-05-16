@@ -78,10 +78,11 @@ table {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 5.25rem;
+  margin-top: 5.25rem;
 }
 .content__logo {
-  max-width: 3.375rem;
+  width: 100%;
+  max-width: 55px;
 }
 .content__subtitle {
   color: hsl(0, 0%, 59%);
@@ -109,6 +110,9 @@ table {
   width: 100%;
 }
 .content__field .field__email {
+  color: hsl(209, 33%, 12%);
+  font-size: 0.75rem;
+  font-weight: "";
   box-sizing: border-box;
   border: 1px solid hsl(225, 77%, 90%);
   border-radius: 1.375rem;
@@ -126,6 +130,16 @@ table {
   color: hsl(225, 77%, 90%);
   font-size: 0.75rem;
   font-weight: "";
+}
+.content__field .field__email:focus {
+  box-shadow: 0 0 0 0;
+  outline: 1px solid hsl(223, 87%, 63%);
+}
+.content__field .field__email:focus::-moz-placeholder {
+  color: hsl(223, 87%, 63%);
+}
+.content__field .field__email:focus::placeholder {
+  color: hsl(223, 87%, 63%);
 }
 .content__field .field__btn {
   color: #ffffff;
@@ -151,6 +165,61 @@ table {
   width: 100%;
 }
 
+@media screen and (min-width: 768px) {
+  .content {
+    margin-top: 5.375rem;
+  }
+  .content__logo {
+    max-width: 5.375rem;
+  }
+  .content__subtitle {
+    color: "";
+    font-size: 3rem;
+    font-weight: "";
+    margin-top: 3.5rem;
+  }
+  .content__paragraph {
+    color: "";
+    font-size: 1.25rem;
+    font-weight: "";
+    margin-top: 1.5rem;
+  }
+  .content__field {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+  .content__field .field__email {
+    color: "";
+    font-size: 1rem;
+    font-weight: "";
+    max-width: 420px;
+    height: 56px;
+    border-radius: 1.75rem;
+  }
+  .content__field .field__email::-moz-placeholder {
+    color: "";
+    font-size: 1rem;
+    font-weight: "";
+  }
+  .content__field .field__email::placeholder {
+    color: "";
+    font-size: 1rem;
+    font-weight: "";
+  }
+  .content__field .field__btn {
+    color: "";
+    font-size: 1rem;
+    font-weight: "";
+    border-radius: 1.75rem;
+    max-width: 12.5rem;
+    height: 56px;
+  }
+  .content__img {
+    max-width: 40rem;
+    margin-top: 5.75rem;
+  }
+}
 /* Exemplo de criação de mixin
 
 @mixin font-styling($color, $fonte-size, $font-weight) {
@@ -163,14 +232,14 @@ table {
 .footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding-bottom: 2.25rem;
+  margin-top: 7.5rem;
+  margin-bottom: 3rem;
 }
 .footer__social {
   display: flex;
   gap: 0.75rem;
-  margin-top: 7.5rem;
 }
 .footer__social .social__icon {
   color: hsl(223, 87%, 63%);
@@ -196,6 +265,17 @@ table {
   margin-top: 1.75rem;
 }
 
+@media screen and (min-width: 768px) {
+  .footer {
+    margin-top: 4.25rem;
+    margin-bottom: 3rem;
+  }
+  .footer__credit {
+    color: "";
+    font-size: 0.75rem;
+    font-weight: "";
+  }
+}
 body {
   box-sizing: border-box;
   font-family: "Libre Franklin", sans-serif;
