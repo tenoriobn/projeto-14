@@ -105,11 +105,18 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
   margin-top: 2rem;
   width: 100%;
 }
-.content__field .field__email {
+.content__field .container__field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.content__field .container__field .field__email {
   color: hsl(209, 33%, 12%);
   font-size: 0.75rem;
   font-weight: "";
@@ -121,25 +128,33 @@ table {
   height: 2.5rem;
   padding-left: 1.75rem;
 }
-.content__field .field__email::-moz-placeholder {
+.content__field .container__field .field__email::-moz-placeholder {
   color: hsl(225, 77%, 90%);
   font-size: 0.75rem;
   font-weight: "";
 }
-.content__field .field__email::placeholder {
+.content__field .container__field .field__email::placeholder {
   color: hsl(225, 77%, 90%);
   font-size: 0.75rem;
   font-weight: "";
 }
-.content__field .field__email:focus {
+.content__field .container__field .field__email:focus {
   box-shadow: 0 0 0 0;
   outline: 1px solid hsl(223, 87%, 63%);
 }
-.content__field .field__email:focus::-moz-placeholder {
+.content__field .container__field .field__email:focus::-moz-placeholder {
   color: hsl(223, 87%, 63%);
 }
-.content__field .field__email:focus::placeholder {
+.content__field .container__field .field__email:focus::placeholder {
   color: hsl(223, 87%, 63%);
+}
+.content__field .container__field .error-message {
+  color: hsl(354, 100%, 66%);
+  font-size: 0.75rem;
+  font-weight: "";
+  display: none;
+  font-style: italic;
+  margin-bottom: 24px;
 }
 .content__field .field__btn {
   color: #ffffff;
@@ -151,6 +166,7 @@ table {
   box-sizing: border-box;
   box-shadow: 0px 3px 10px 1px rgba(77, 124, 243, 0.411);
   cursor: pointer;
+  margin-top: 10px;
   max-width: 17.5625rem;
   width: 100%;
   height: 2.5rem;
@@ -187,9 +203,14 @@ table {
   .content__field {
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
     margin-top: 2.5rem;
   }
-  .content__field .field__email {
+  .content__field .container__field {
+    align-items: flex-start;
+    gap: 0.625rem;
+  }
+  .content__field .container__field .field__email {
     color: "";
     font-size: 1rem;
     font-weight: "";
@@ -197,21 +218,26 @@ table {
     height: 56px;
     border-radius: 1.75rem;
   }
-  .content__field .field__email::-moz-placeholder {
+  .content__field .container__field .field__email::-moz-placeholder {
     color: "";
     font-size: 1rem;
     font-weight: "";
   }
-  .content__field .field__email::placeholder {
+  .content__field .container__field .field__email::placeholder {
     color: "";
     font-size: 1rem;
     font-weight: "";
+  }
+  .content__field .container__field .error-message {
+    position: relative;
+    left: 2rem;
   }
   .content__field .field__btn {
     color: "";
     font-size: 1rem;
     font-weight: "";
     border-radius: 1.75rem;
+    margin-top: 0px;
     max-width: 12.5rem;
     height: 56px;
   }

@@ -32,34 +32,50 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
         
         margin-top: 2rem;
         width: 100%;
 
-        .field__email {
-            @include font-styling($veryDarkBlue, .75rem, '');
-            box-sizing: border-box;
-            border: 1px solid $lightBlue;
-            border-radius: 1.375rem;
+        .container__field {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
 
-            max-width: 17.5625rem;
             width: 100%;
-            height: 2.5rem;
 
-            padding-left: 1.75rem;
+            .field__email {
+                @include font-styling($veryDarkBlue, .75rem, '');
+                box-sizing: border-box;
+                border: 1px solid $lightBlue;
+                border-radius: 1.375rem;
 
-            &::placeholder {
-                @include font-styling($lightBlue, .75rem, '');
+                max-width: 17.5625rem;
+                width: 100%;
+                height: 2.5rem;
+
+                padding-left: 1.75rem;
+
+                &::placeholder {
+                    @include font-styling($lightBlue, .75rem, '');
+                }
+
+                &:focus {
+                    box-shadow: 0 0 0 0;
+                    outline: 1px solid $blue;
+                    
+                    &::placeholder {
+                        color: $blue;
+                    }
+                }
             }
 
-            &:focus {
-                box-shadow: 0 0 0 0;
-                outline: 1px solid $blue;
-                
-                &::placeholder {
-                    color: $blue;
-                }
+            .error-message {
+                @include font-styling($lightRed, .75rem, '');
+                display: none;
+                font-style: italic;
+                margin-bottom: 24px;
             }
         }
 
@@ -72,6 +88,7 @@
             box-shadow: 0px 3px 10px 1px rgba(77, 124, 243, 0.411);
             cursor: pointer;
 
+            margin-top: 10px;
             max-width: 17.5625rem;
             width: 100%;
             height: 2.5rem;
@@ -113,22 +130,35 @@
         &__field {
             flex-direction: row;
             justify-content: center;
+            align-items: flex-start;
             margin-top: 2.5rem;
 
-            .field__email {
-                @include font-styling('', 1rem, '');
-                max-width: 420px;
-                height: 56px;
-                border-radius: 1.75rem;
+            .container__field {
+                align-items: flex-start;
+                gap: .625rem;
 
-                &::placeholder {
+                .field__email {
                     @include font-styling('', 1rem, '');
+                    max-width: 420px;
+                    height: 56px;
+                    border-radius: 1.75rem;
+
+    
+                    &::placeholder {
+                        @include font-styling('', 1rem, '');
+                    }
+                }
+
+                .error-message {
+                    position: relative;
+                    left: 2rem;
                 }
             }
 
             .field__btn {
                 @include font-styling('', 1rem, '');
                 border-radius: 1.75rem;
+                margin-top: 0px;
                 max-width: 12.5rem;
                 height: 56px;
             }
