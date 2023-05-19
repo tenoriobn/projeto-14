@@ -156,6 +156,28 @@ table {
   font-style: italic;
   margin-bottom: 24px;
 }
+.content__field .container__field .error-input {
+  border: 1px solid hsl(354, 100%, 66%);
+}
+.content__field .container__field .error-input::-moz-placeholder {
+  color: hsla(354, 100%, 66%, 0.534);
+  font-size: "";
+  font-weight: "";
+}
+.content__field .container__field .error-input::placeholder {
+  color: hsla(354, 100%, 66%, 0.534);
+  font-size: "";
+  font-weight: "";
+}
+.content__field .container__field .error-input:focus {
+  outline: none;
+}
+.content__field .container__field .error-input:focus::-moz-placeholder {
+  color: hsl(354, 100%, 66%);
+}
+.content__field .container__field .error-input:focus::placeholder {
+  color: hsl(354, 100%, 66%);
+}
 .content__field .field__btn {
   color: #ffffff;
   font-size: 0.75rem;
@@ -231,6 +253,7 @@ table {
   .content__field .container__field .error-message {
     position: relative;
     left: 2rem;
+    margin-bottom: 0px;
   }
   .content__field .field__btn {
     color: "";

@@ -77,6 +77,22 @@
                 font-style: italic;
                 margin-bottom: 24px;
             }
+
+            .error-input {
+                border: 1px solid $lightRed;
+
+                &::placeholder {
+                    @include font-styling($lightRedMessage, '', '');
+                }
+
+                &:focus {
+                    outline: none;
+
+                    &::placeholder {
+                        color: $lightRed;
+                    }
+                }
+            }
         }
 
         .field__btn {
@@ -152,6 +168,7 @@
                 .error-message {
                     position: relative;
                     left: 2rem;
+                    margin-bottom: 0px;
                 }
             }
 
