@@ -39,6 +39,11 @@
     }
 }
 
+.footer____thank {
+    margin: 0;
+    height: 0vh;
+}
+
 @media screen and (min-width: 768px) {
     .footer {
         margin-top: 4.25rem;
@@ -47,5 +52,10 @@
         &__credit {
             @include font-styling('', .75rem, '');
         }
+    }
+
+    .footer____thank {
+        margin: 0;
+        height: 0vh;
     }
 }
