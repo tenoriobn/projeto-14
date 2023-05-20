@@ -1,9 +1,41 @@
 import emailValidator from "./2-emailValidator.js";
 
+const btnForm = document.querySelector(".field__btn");
+const form = document.querySelector(".form");
 const requiredField = document.querySelectorAll("[required]");
+
+btnForm.addEventListener("click", () => {
+    const fieldEmail = document.querySelector(".field__email");
+
+    if (fieldEmail.value === '') {
+        let message = messages[fieldEmail.name].valueMissing;
+        let errorMessage = fieldEmail.parentNode.querySelector('.error-message');
+        let errorInput = fieldEmail.parentNode.querySelector('.field__email');
+
+        errorMessage.textContent = message;
+        errorMessage.style.display = 'block';
+        errorInput.classList.add('error-input');
+        errorInput.placeholder = "E.g. example@email.com";
+
+        return false;
+    }
+});
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const emailRegistration = {
+        "emailField": e.target.elements["emailField"].value
+    }
+
+    sessionStorage.setItem("register", JSON.stringify(emailRegistration));
+
+    window.location.href = 'thankYouPage.html';
+})
 
 requiredField.forEach((field) => {
     field.addEventListener("blur", () => checkField(field));
+    field.addEventListener("invalid", event => event.preventDefault());
 });
 
 const errorTypes = [
@@ -52,3 +84,8 @@ function checkField(field) {
     }
 }
 
+/*
+    - Adicionar submit ao formulário
+    - Só é possível dar submit se o campo estiver preenchido
+        + Se não estiver preenchido e tentar submit aparecera mensagem.
+*/
