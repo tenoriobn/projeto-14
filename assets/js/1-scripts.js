@@ -85,7 +85,19 @@ function checkField(field) {
 }
 
 /*
-    - Adicionar submit ao formulário
-    - Só é possível dar submit se o campo estiver preenchido
-        + Se não estiver preenchido e tentar submit aparecera mensagem.
+### O desafio
+
+Os usuários devem ser capazes de:
+- Veja o layout ideal para o site, dependendo do tamanho da tela do dispositivo***
+
+- Veja os estados de foco para todos os elementos interativos na página***
+
+- Envie seu endereço de e-mail usando um campo `input`***
+
+- Receba uma mensagem de erro quando o `formulário` for enviado se:
+    + O campo `input` está vazio. A mensagem desse erro deve ser 
+        "Opa! Parece que você esqueceu de adicionar seu e-mail"***
+    + O endereço de e-mail não está formatado corretamente 
+        (ou seja, um endereço de e-mail correto deve ter esta estrutura: `name@host.tld`). 
+        A mensagem para este erro deve dizer *"Forneça um endereço de e-mail válido"***
 */

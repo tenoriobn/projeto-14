@@ -51,7 +51,7 @@
                 border: 1px solid $lightBlue;
                 border-radius: 1.375rem;
 
-                
+                max-width: 17.5625rem;
                 width: 100%;
                 height: 2.5rem;
 
@@ -105,7 +105,7 @@
             cursor: pointer;
 
             margin-top: 10px;
-
+            max-width: 17.5625rem;
             width: 100%;
             height: 2.5rem;
 
@@ -120,7 +120,7 @@
 
     &__img {
         margin-top: 4.25rem;
-        max-width: 40rem;
+        max-width: 20rem;
         width: 100%;
     }
 }
